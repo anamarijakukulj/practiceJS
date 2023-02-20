@@ -25,14 +25,21 @@ body {
 .container__end {
   display: block;
   margin-top: 5%;
+  text-align: center;
 }
 
-#start {
+#start,
+#next {
   font-family: "Press Start 2P", cursive;
   font-size: 2rem;
   color: #fef2bf;
   background-color: transparent;
   border: none;
+  margin: 0 auto;
+}
+
+#next {
+  display: none;
 }
 
 .btn {
@@ -64,4 +71,3 @@ body {
   box-shadow: 0 0 20px white;
   background-color: grey;
 }
-
