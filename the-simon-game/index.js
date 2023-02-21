@@ -62,11 +62,6 @@ const getRandomSeq = () => {
 
     animation(button);
 
-    // buttons[number].classList.add("pressed");
-    // setTimeout(() => {
-    //   buttons[number].classList.remove("pressed");
-    // }, 200);
-
     console.log(number);
     randomSequence.push(buttons[number].id);
     console.log(randomSequence);
@@ -80,10 +75,6 @@ const getRandomSeq = () => {
 const getPlayerSeq = (button) => {
   button.addEventListener("click", () => {
     animation(button);
-    // button.classList.add("pressed");
-    // setTimeout(() => {
-    //   button.classList.remove("pressed");
-    // }, 200);
     let clickedButton = button.id;
     playerSequence.push(clickedButton);
     console.log(randomSequence);
