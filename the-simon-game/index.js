@@ -11,24 +11,27 @@ const randomNum = () => {
   return Math.floor(Math.random() * 4);
 };
 
-function winGame() {
+const animation = (button) => {
+  button.classList.add("pressed");
+  setTimeout(() => {
+    button.classList.remove("pressed");
+  }, 200);
+};
+
+const winGame = () => {
   start.style.display = "block";
   levelTitle.textContent = "YOU WIN!";
   level = 1;
-  randomSequence = [];
-  playerSequence = [];
-}
+};
 
-function endGame() {
+const endGame = () => {
   levelTitle.textContent = "END GAME";
   start.style.display = "block";
   console.log("END GAME");
   level = 1;
-  randomSequence = [];
-  playerSequence = [];
-}
+};
 
-function nextLevel() {
+const nextLevel = () => {
   next.style.display = "block";
   next.addEventListener("click", () => {
     if (level < 10) {
@@ -38,9 +41,9 @@ function nextLevel() {
       winGame();
     }
   });
-}
+};
 
-function checkAnswer() {
+const checkAnswer = () => {
   for (let i = 0; i < playerSequence.length; i++) {
     if (randomSequence[i] !== playerSequence[i]) {
       endGame();
@@ -50,16 +53,19 @@ function checkAnswer() {
       continue;
     }
   }
-}
+};
 
-function getRandomSeq() {
+const getRandomSeq = () => {
   let getPattern = setInterval(() => {
     let number = randomNum();
+    let button = buttons[number];
 
-    buttons[number].classList.add("pressed");
-    setTimeout(() => {
-      buttons[number].classList.remove("pressed");
-    }, 200);
+    animation(button);
+
+    // buttons[number].classList.add("pressed");
+    // setTimeout(() => {
+    //   buttons[number].classList.remove("pressed");
+    // }, 200);
 
     console.log(number);
     randomSequence.push(buttons[number].id);
@@ -69,14 +75,15 @@ function getRandomSeq() {
       clearInterval(getPattern);
     }
   }, 800);
-}
+};
 
 const getPlayerSeq = (button) => {
   button.addEventListener("click", () => {
-    button.classList.add("pressed");
-    setTimeout(() => {
-      button.classList.remove("pressed");
-    }, 200);
+    animation(button);
+    // button.classList.add("pressed");
+    // setTimeout(() => {
+    //   button.classList.remove("pressed");
+    // }, 200);
     let clickedButton = button.id;
     playerSequence.push(clickedButton);
     console.log(randomSequence);
@@ -88,7 +95,7 @@ const getPlayerSeq = (button) => {
   });
 };
 
-function playGame(level) {
+const playGame = (level) => {
   start.style.display = "none";
   next.style.display = "none";
   levelTitle.textContent = `Level ${level}`;
@@ -99,9 +106,10 @@ function playGame(level) {
   buttons.forEach((button) =>
     button.addEventListener("click", getPlayerSeq(button))
   );
-}
+};
 
 const game = () => {
   playGame(level);
 };
+
 start.addEventListener("click", game);
