@@ -18,6 +18,15 @@ const animation = (button) => {
   }, 200);
 };
 
+const levelUp = () => {
+  if (level < 10) {
+    level++;
+    playGame(level);
+  } else if (level === 10) {
+    winGame();
+  }
+};
+
 const winGame = () => {
   start.classList.add("active");
   levelTitle.textContent = "YOU WIN!";
@@ -33,14 +42,6 @@ const endGame = () => {
 
 const nextLevel = () => {
   next.classList.add("active");
-  next.addEventListener("click", () => {
-    if (level < 10) {
-      level++;
-      playGame(level);
-    } else if (level === 10) {
-      winGame();
-    }
-  });
 };
 
 const checkAnswer = () => {
@@ -48,7 +49,11 @@ const checkAnswer = () => {
     if (randomSequence[i] !== playerSequence[i]) {
       endGame();
     } else if (i === 2) {
-      nextLevel();
+      if (level === 10) {
+        winGame();
+      } else {
+        nextLevel();
+      }
     } else {
       continue;
     }
@@ -101,6 +106,7 @@ const game = () => {
 };
 
 start.addEventListener("click", game);
+next.addEventListener("click", levelUp);
 buttons.forEach((button) =>
   button.addEventListener("click", getPlayerSeq(button))
 );
