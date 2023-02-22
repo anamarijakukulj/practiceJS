@@ -88,6 +88,7 @@ const getPlayerSeq = (button) => {
 
 const playGame = (level) => {
   start.classList.remove("active");
+  next.classList.remove("active");
   levelTitle.textContent = `Level ${level}`;
   randomSequence = [];
   playerSequence = [];
