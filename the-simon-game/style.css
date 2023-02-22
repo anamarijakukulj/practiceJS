@@ -30,6 +30,7 @@ body {
 
 #start,
 #next {
+  display: "none";
   font-family: "Press Start 2P", cursive;
   font-size: 2rem;
   color: #fef2bf;
@@ -70,4 +71,8 @@ body {
 .pressed {
   box-shadow: 0 0 20px white;
   background-color: grey;
+}
+
+.active {
+display: "block";
 }
