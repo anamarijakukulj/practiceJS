@@ -1,6 +1,8 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 
+import "./index.css";
+
 // function Greetings() {
 //   return (
 //     <>
@@ -21,7 +23,7 @@ import ReactDOM from "react-dom/client";
 
 const BookList = () => {
   return (
-    <section>
+    <section className="booklist">
       <Book />
       <Book />
       <Book />
@@ -33,7 +35,7 @@ const BookList = () => {
 
 const Book = () => {
   return (
-    <article>
+    <article className="book">
       <Image />
       <Title />
       <Author />
@@ -41,10 +43,20 @@ const Book = () => {
   );
 };
 
-const Image = () => <h2>image placeholder</h2>;
-const Title = () => <h2>Book Title</h2>;
+const Image = () => (
+  <img
+    src="https://m.media-amazon.com/images/I/51B7kuFwQFL._SY344_BO1,204,203,200_.jpg"
+    alt="Atomic Habits"
+  />
+);
+const Title = () => <h2>Atomic Habits</h2>;
 const Author = () => {
-  return <h4>Author</h4>;
+  const inlineHeadingStyles = {
+    color: "#617d98",
+    fontSize: "0.75rem",
+    marginTop: "0.5rem",
+  };
+  return <h4 style={inlineHeadingStyles}>James Clear</h4>;
 };
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
