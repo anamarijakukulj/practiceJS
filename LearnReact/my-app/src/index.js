@@ -2,24 +2,8 @@ import React from "react";
 import ReactDOM from "react-dom/client";
 
 import "./index.css";
-
-// function Greetings() {
-//   return (
-//     <>
-//       <Person />
-//       <Message />
-//     </>
-//   );
-// }
-
-// const Person = () => <h2>john doe</h2>;
-// const Message = () => {
-//   return <p>this is my message</p>;
-// };
-
-// function Greetings() {
-//   return React.createElement("h2", {}, "hello world");
-// }
+const author = "James Clear";
+const title = "Atomic Habits";
 
 const BookList = () => {
   return (
@@ -33,9 +17,7 @@ const BookList = () => {
   );
 };
 
-const author = "James Clear";
 const Book = () => {
-  const title = "Atomic Habits";
   return (
     <article className="book">
       <img
