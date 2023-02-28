@@ -2,25 +2,11 @@ import React from "react";
 import ReactDOM from "react-dom/client";
 
 import "./index.css";
-
-// function Greetings() {
-//   return (
-//     <>
-//       <Person />
-//       <Message />
-//     </>
-//   );
-// }
-
-// const Person = () => <h2>john doe</h2>;
-// const Message = () => {
-//   return <p>this is my message</p>;
-// };
-
-// function Greetings() {
-//   return React.createElement("h2", {}, "hello world");
-// }
-
+const author = "James Clear";
+const title = "Atomic Habits";
+// const image = "./Images/book.jpg";
+const image =
+  "https://m.media-amazon.com/images/I/51B7kuFwQFL._SY344_BO1,204,203,200_.jpg";
 const BookList = () => {
   return (
     <section className="booklist">
@@ -33,15 +19,10 @@ const BookList = () => {
   );
 };
 
-const author = "James Clear";
 const Book = () => {
-  const title = "Atomic Habits";
   return (
     <article className="book">
-      <img
-        src="https://m.media-amazon.com/images/I/51B7kuFwQFL._SY344_BO1,204,203,200_.jpg"
-        alt="Atomic Habits"
-      />
+      <img src={image} alt={title} />
       <h2>{title}</h2>
       <h4>{author}</h4>
     </article>
