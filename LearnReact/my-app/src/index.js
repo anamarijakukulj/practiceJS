@@ -4,13 +4,9 @@ import ReactDOM from "react-dom/client";
 import "./index.css";
 const author = "James Clear";
 const title = "Atomic Habits";
-<<<<<<< HEAD
 // const image = "./Images/book.jpg";
-const image =
-  "https://m.media-amazon.com/images/I/51B7kuFwQFL._SY344_BO1,204,203,200_.jpg";
-=======
+const image = "https://m.media-amazon.com/images/I/51B7kuFwQFL._SY344_BO1,204,203,200_.jpg";
 
->>>>>>> a7f2ae318baf836eec772ed8213c5572c522284a
 const BookList = () => {
   return (
     <section className="booklist">
