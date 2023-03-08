@@ -1,9 +1,9 @@
-import UseStateObject from "./projects/01-useState/04-useState-object";
+import UseStateGotcha from "./projects/01-useState/04-useState-gotcha";
 
 function App() {
   return (
     <div className="container">
-      <UseStateObject />
+      <UseStateGotcha />
     </div>
   );
 }
