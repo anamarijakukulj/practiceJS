@@ -1,10 +1,7 @@
-function App() {
+import React from "react";
 
-  return (
-    <>
-     
-    <>
-  )
+function App() {
+  return <p>Birthday App</p>;
 }
 
-export default App
+export default App;
