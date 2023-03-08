@@ -1,34 +1,21 @@
 import Title from "./Title";
-import { tours } from "../data";
+import { services } from "../data";
 
-const Tours = () => {
+const Services = () => {
   return (
-    <section className="section" id="tours">
-      <Title title="featured" subTitle="tours" />
+    <section className="section services" id="services">
+      <Title title="our" subTitle="services" />
 
-      <div className="section-center featured-center">
-        {tours.map((tour) => {
+      <div className="section-center services-center">
+        {services.map((service) => {
           return (
-            <article className="tour-card">
-              <div className="tour-img-container">
-                <img src={tour.image} className="tour-img" alt="" />
-                <p className="tour-date">{tour.date}</p>
-              </div>
-              <div className="tour-info">
-                <div className="tour-title">
-                  <h4>{tour.title}</h4>
-                </div>
-                <p>{tour.text}</p>
-                <div className="tour-footer">
-                  <p>
-                    <span>
-                      <i className="fas fa-map"></i>
-                    </span>{" "}
-                    {tour.location}
-                  </p>
-                  <p>{tour.duration} days</p>
-                  <p>from ${tour.price}</p>
-                </div>
+            <article className="service" id={service.id}>
+              <span className="service-icon">
+                <i className={service.icon}></i>
+              </span>
+              <div className="service-info">
+                <h4 className="service-title">{service.title}</h4>
+                <p className="service-text">{service.text}</p>
               </div>
             </article>
           );
@@ -38,4 +25,4 @@ const Tours = () => {
   );
 };
 
-export default Tours;
+export default Services;
