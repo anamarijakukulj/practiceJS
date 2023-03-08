@@ -1,52 +1,41 @@
 import Title from "./Title";
+import { tours } from "../data";
 
-const Services = () => {
+const Tours = () => {
   return (
-    <section className="section services" id="services">
-      <Title title="our" subTitle="services" />
+    <section className="section" id="tours">
+      <Title title="featured" subTitle="tours" />
 
-      <div className="section-center services-center">
-        <article className="service">
-          <span className="service-icon">
-            <i className="fas fa-wallet fa-fw"></i>
-          </span>
-          <div className="service-info">
-            <h4 className="service-title">saving money</h4>
-            <p className="service-text">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit.
-              Asperiores, officia.
-            </p>
-          </div>
-        </article>
-
-        <article className="service">
-          <span className="service-icon">
-            <i className="fas fa-tree fa-fw"></i>
-          </span>
-          <div className="service-info">
-            <h4 className="service-title">endless hiking</h4>
-            <p className="service-text">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit.
-              Asperiores, officia.
-            </p>
-          </div>
-        </article>
-
-        <article className="service">
-          <span className="service-icon">
-            <i className="fas fa-socks fa-fw"></i>
-          </span>
-          <div className="service-info">
-            <h4 className="service-title">amazing comfort</h4>
-            <p className="service-text">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit.
-              Asperiores, officia.
-            </p>
-          </div>
-        </article>
+      <div className="section-center featured-center">
+        {tours.map((tour) => {
+          return (
+            <article className="tour-card">
+              <div className="tour-img-container">
+                <img src={tour.image} className="tour-img" alt="" />
+                <p className="tour-date">{tour.date}</p>
+              </div>
+              <div className="tour-info">
+                <div className="tour-title">
+                  <h4>{tour.title}</h4>
+                </div>
+                <p>{tour.text}</p>
+                <div className="tour-footer">
+                  <p>
+                    <span>
+                      <i className="fas fa-map"></i>
+                    </span>{" "}
+                    {tour.location}
+                  </p>
+                  <p>{tour.duration} days</p>
+                  <p>from ${tour.price}</p>
+                </div>
+              </div>
+            </article>
+          );
+        })}
       </div>
     </section>
   );
 };
 
-export default Services;
+export default Tours;
