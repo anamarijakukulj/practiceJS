@@ -1,4 +1,4 @@
-import UseStateGotcha from "./projects/01-useState/05-useState-gotcha";
+import UseStateGotcha from "./exercises/01-useState/05-useState-gotcha";
 
 function App() {
   return (
