@@ -1,9 +1,9 @@
-import UseStateArray from "./projects/01-useState/03-useState-array";
+import UseStateObject from "./projects/01-useState/04-useState-object";
 
 function App() {
   return (
     <div className="container">
-      <UseStateArray />
+      <UseStateObject />
     </div>
   );
 }
