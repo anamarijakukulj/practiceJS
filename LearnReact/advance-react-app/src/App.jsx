@@ -1,9 +1,9 @@
-import UseStateGotcha from "./exercises/01-useState/05-useState-gotcha";
+import CodeExample from "./exercises/02-useEffect/01-code-example";
 
 function App() {
   return (
     <div className="container">
-      <UseStateGotcha />
+      <CodeExample />
     </div>
   );
 }
