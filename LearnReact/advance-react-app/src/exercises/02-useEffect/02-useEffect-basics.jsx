@@ -7,6 +7,10 @@ const UseEffectBasics = () => {
   };
 
   sayHello();
+  
+  useEffect(() => {
+    console.log("hello from useEffect");
+  });
 
   return (
     <div>
