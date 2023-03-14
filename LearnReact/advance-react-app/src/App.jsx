@@ -1,9 +1,9 @@
-import CodeExample from "./exercises/02-useEffect/01-code-example";
+import Navbar from "./exercises/04-project-structure/Navbar";
 
 function App() {
   return (
     <div className="container">
-      <CodeExample />
+      <Navbar />
     </div>
   );
 }
