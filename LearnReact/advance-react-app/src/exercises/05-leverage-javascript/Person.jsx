@@ -1,5 +1,5 @@
-export function Person({name, nickName, images}) {
-  const img = images[0].small.url;
+export function Person({name, nickName = "shakeAndBake", images}) {
+  const img = images && images[0] && images[0].small && images[0].small.url;
   
   return (
     <div>
