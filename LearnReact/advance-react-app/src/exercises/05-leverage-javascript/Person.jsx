@@ -1,3 +1,11 @@
-export function Person({}) {
-  return <div key={personalbar.id}>{person.name}</div>;
+export function Person({name, nickName, images}) {
+  const img = images[0].small.url;
+  
+  return (
+    <div>
+      <img src={img} alt={name} style={{width: "50px"}} />
+      <h4>{name}</h4>
+      <p>Nickname: {nickName}</p>
+    </div>
+  );
 }
