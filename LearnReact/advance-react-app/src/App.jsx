@@ -1,9 +1,9 @@
-import Example from "./exercises/04-project-structure/Example";
+import List from "./exercises/05-leverage-javascript/List";
 
 function App() {
   return (
     <div className="container">
-      <Example />
+      <List />
     </div>
   );
 }
