@@ -1,11 +1,64 @@
-import React from 'react'
-import Navbar from './Navbar'
-function App() {
-  return (
-    <>
-      <h2>navbar project setup</h2>
-    </>
-  )
-}
+import React, { useState, useRef, useEffect } from "react";
+import { FaBars, FaTwitter } from "react-icons/fa";
+import { links, social } from "./data";
+import logo from "./logo.svg";
 
-export default App
+const Navbar = () => {
+  return (
+    <nav>
+      <div className="nav-center">
+        <div className="nav-header">
+          <img src={logo} alt="logo" />
+          <button className="nav-toggle">
+            <FaBars />
+          </button>
+        </div>
+
+        <div className="links-container show-container">
+          <ul className="links">
+            <li>
+              <a href="#home">home</a>
+            </li>
+
+            <li>
+              <a href="#about">about</a>
+            </li>
+
+            <li>
+              <a href="#contact">contact</a>
+            </li>
+
+            <li>
+              <a href="#products">products</a>
+            </li>
+          </ul>
+        </div>
+
+        <ul className="social-icons">
+          <li>
+            <a href="https://www.twitter.com">
+              {" "}
+              <FaTwitter />
+            </a>
+          </li>
+
+          <li>
+            <a href="https://www.twitter.com">
+              {" "}
+              <FaTwitter />
+            </a>
+          </li>
+
+          <li>
+            <a href="https://www.twitter.com">
+              {" "}
+              <FaTwitter />
+            </a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+  );
+};
+
+export default Navbar;
