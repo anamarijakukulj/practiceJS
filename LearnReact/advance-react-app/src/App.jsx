@@ -1,9 +1,9 @@
-import List from "./exercises/05-leverage-javascript/List";
+import Navbar from "./exercises/09-context-api/Navbar";
 
 function App() {
   return (
     <div className="container">
-      <List />
+      <Navbar />
     </div>
   );
 }
