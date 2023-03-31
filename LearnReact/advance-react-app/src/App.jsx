@@ -1,9 +1,9 @@
-import Navbar from "./exercises/09-context-api/Navbar";
+import ReducerBasics from "./exercises/10-useReducer/01-useReducer";
 
 function App() {
   return (
     <div className="container">
-      <Navbar />
+      <ReducerBasics />
     </div>
   );
 }
