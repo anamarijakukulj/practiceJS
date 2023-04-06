@@ -1,4 +1,10 @@
 import { Outlet, Link } from "react-router-dom";
+import { geContacts } from "../contact";
+
+export async function loader() {
+  const contacts = await getContacts();
+  return { contacts };
+}
 
 export default function Root() {
   return (
