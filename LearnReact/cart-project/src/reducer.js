@@ -53,7 +53,7 @@ const reducer = (state, action) => {
   }
   
   if(action.type === 'LOADING') {
-    return {..state, loading: true};
+    return {...state, loading: true};
   }
   
   if(action.type === 'DISPLAY ITEMS') {
@@ -80,3 +80,5 @@ const reducer = (state, action) => {
   
   throw new Error('no matching action type');
 }
+
+export default reducer;
