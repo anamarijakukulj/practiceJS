@@ -1,4 +1,4 @@
-mport LowerState from "./exercises/11-performance/03-hooks";
+import LowerState from "./exercises/11-performance/03-hooks";
 
 function App() {
   return (
