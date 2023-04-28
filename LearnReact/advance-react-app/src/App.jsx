@@ -1,9 +1,9 @@
-import ReducerBasics from "./exercises/10-useReducer/01-useReducer";
+mport LowerState from "./exercises/11-performance/03-hooks";
 
 function App() {
   return (
     <div className="container">
-      <ReducerBasics />
+      <LowerState />
     </div>
   );
 }
