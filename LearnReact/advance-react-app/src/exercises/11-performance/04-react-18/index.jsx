@@ -1,9 +1,12 @@
-import { useState, useTransition } from 'react';
+import { useState, useTransition, lazy, Suspense } from 'react';
+
+const SlowComponent = lazy(() => import('./SlowComponent'));
 
 const LatestReact = () => {
   const [text, setText] = useState('');
   const [items, setItems] = useState([]);
-  const [isPending, startTransition] = useTransition()
+  const [isPending, startTransition] = useTransition();
+  const [show, setShow] = useState(false);
 
   const handleChange = (e) => {
     setText(e.target.value);
@@ -23,33 +26,37 @@ const LatestReact = () => {
     
 
   return (
-    <section>
-      <form className='form'>
-        <input
-          type='text'
-          className='form-input'
-          value={text}
-          onChange={handleChange}
-        />
-      </form>
+    <Suspense>
+      <section>
+        <form className='form'>
+          <input
+            type='text'
+            className='form-input'
+            value={text}
+            onChange={handleChange}
+          />
+        </form>
 
-      <h4>Items Below</h4>
+        <h4>Items Below</h4>
 
-      {isPending ? (
-        <h4>Loading...</h4>
-      ) : (
-        <div
-        style={{
-          display: 'grid',
-          gridTemplateColumns: '1fr 1fr 1fr',
-          marginTop: '2rem',
-        }}
-        >
-        {items}
-        </div> 
-      )}
+        {isPending ? (
+          'Loading...'
+          ) : (
+          <div
+          style={{
+            display: 'grid',
+            gridTemplateColumns: '1fr 1fr 1fr',
+            marginTop: '2rem',
+          }}
+          >
+            {items}
+          </div> 
+        )}
 
-    </section>
+        <button onClick={() => setShow(!show)} className='btn'>toggle</button>
+        {show && <SlowComponent />}
+      </section>
+    </Suspense>
   );
 };
 export default LatestReact;
