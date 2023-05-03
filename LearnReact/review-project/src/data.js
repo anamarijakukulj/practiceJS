@@ -37,4 +37,4 @@ const people = [
   },
 ];
 
-export default reviews;
+export default people;
