@@ -1,4 +1,4 @@
-const people = [
+const list = [
   {
     id: 1,
     image:
@@ -37,4 +37,4 @@ const people = [
   },
 ];
 
-export default people;
+export default list;
