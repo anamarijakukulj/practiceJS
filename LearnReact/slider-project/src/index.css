@@ -172,9 +172,9 @@ Slider
   font-weight: 700;
 }
 
-.section-center {
+.slider-container {
   margin: 0 auto;
-  margin-top: 4rem;
+  margin-top: 6rem;
   width: 80vw;
   height: 450px;
   max-width: 800px;
@@ -264,8 +264,13 @@ article h4 {
   }
 }
 
+.next-slide {
+  transform: translateX(100%);
+}
+
 article {
   position: absolute;
+  text-align: center;
   top: 0;
   left: 0;
   width: 100%;
