@@ -158,7 +158,7 @@ Jobs
 
 .jobs-center {
   width: 80vw;
-  margin: 0 auto;
+  margin: 4rem auto;
   max-width: var(--max-width);
 }
 .btn-container {
@@ -187,7 +187,11 @@ Jobs
 }
 .active-btn {
   color: var(--clr-primary-5);
+  background: transparent;
   box-shadow: 0 2px var(--clr-primary-5);
+  border: none;
+  font-size: 1.25rem;
+  margin: 0 0.5rem;
 }
 
 .job-info h3 {
@@ -262,6 +266,4 @@ Jobs
 .btn:hover {
   color: var(--clr-primary-1);
   background: var(--clr-primary-8);
-}
-.center-btn {
 }
