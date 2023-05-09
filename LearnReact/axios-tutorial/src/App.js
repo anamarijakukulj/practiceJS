@@ -1,12 +1,12 @@
 import Title from './components/Title';
-import GlobalInstance from './examples/4-global-instance';
+import Interceptors from './examples/6-interceptors';
 import './axios/global';
 
 function App() {
   return (
     <main>
       <Title />
-      <GlobalInstance />
+      <Interceptors />
     </main>
   );
 }
