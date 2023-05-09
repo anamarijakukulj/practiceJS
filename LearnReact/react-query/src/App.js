@@ -1,4 +1,4 @@
-import { ToastContainer } from 'react-toastify';
+// import { ToastContainer } from 'react-toastify';
 import { nanoid } from 'nanoid';
 import Form from './Form';
 import Items from './Items';
@@ -13,7 +13,7 @@ const App = () => {
   const [items, setItems] = useState(defaultItems);
   return (
     <section className='section-center'>
-      <ToastContainer position='top-center' />
+      {/* <ToastContainer position='top-center' /> */}
       <Form />
       <Items items={items} />
     </section>
