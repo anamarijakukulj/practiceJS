@@ -61,6 +61,12 @@ html {
   --shadow-4: 0 20px 25px -5px rgba(0, 0, 0, 0.1),
     0 10px 10px -5px rgba(0, 0, 0, 0.04);
   /* dark mode setup */
+  --dark-mode-bg-color: var(--black);
+  --dark-mode-text-color: var(--grey-50);
+  --backgroundColor: var(--grey-50);
+  --textColor: var(--grey-900);
+  --darkModeTransition: color 0.3s ease-in-out,
+    background-color 0.3s ease-in-out;
 }
 
 body {
@@ -68,6 +74,9 @@ body {
     Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
   font-weight: 400;
   line-height: 1;
+  background: var(--backgroundColor);
+  color: var(--textColor);
+  transition: var(--darkModeTransition);
 }
 p {
   margin: 0;
@@ -306,6 +315,16 @@ Toggle Container
   font-size: 1.5rem;
   color: var(--textColor);
 }
+
+.dark-theme {
+  background-color: var(--dark-mode-bg-color);
+  color: var(--dark-mode-text-color);
+}
+
+.dark-theme .toggle-icon {
+  color: var(--dark-mode-text-color);
+}
+
 /* 
 ========
 Search Form
