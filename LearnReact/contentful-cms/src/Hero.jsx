@@ -1,3 +1,5 @@
+import heroImg from './assets/hero.svg';
+
 const Hero = () => {
     return (
         <section className="hero">
@@ -12,7 +14,7 @@ const Hero = () => {
                 </div>
 
                 <div className="img-container">
-                    <img src="" alt="" />
+                    <img src={heroImg} alt="woman and the browser" className='img' />
                 </div>
             </div>
         </section>
