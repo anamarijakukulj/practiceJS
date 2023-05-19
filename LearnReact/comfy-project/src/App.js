@@ -28,6 +28,10 @@ function App() {
           <About />
         </Route>
 
+        <Route exact path="/cart">
+          <Cart />
+        </Route>
+
         <Route exact path="/products">
           <Products />
         </Route>
