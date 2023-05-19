@@ -7,10 +7,17 @@ import {
   GET_SINGLE_PRODUCT_BEGIN,
   GET_SINGLE_PRODUCT_SUCCESS,
   GET_SINGLE_PRODUCT_ERROR,
-} from '../actions';
+} from "../actions";
 
 const products_reducer = (state, action) => {
-  return state;
+  if (action.type === "SIDEBAR_OPEN") {
+    return { ...state, isSidebarOpen: true };
+  }
+
+  if (action.type === "SIDEBAR_CLOSE") {
+    return { ...state, isSidebarOpen: false };
+  }
+
   throw new Error(`No Matching "${action.type}" - action type`);
 };
 
