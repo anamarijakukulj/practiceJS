@@ -1,7 +1,5 @@
 function App() {
-  return (
-   <div>Jobster Redux</div>
-  );
+  return <div>Jobster Redux</div>;
 }
 
 export default App;
