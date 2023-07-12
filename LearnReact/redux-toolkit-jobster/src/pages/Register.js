@@ -35,24 +35,24 @@ const RegisterPage = () => {
     }
 
     if (isMember) {
-      dispatch(loginUser({ email: email, password: password }));
+      dispatch (loginUser({ email: email, password: password }));
       return;
     }
 
-    dispatch(registerUser);
+    dispatch(registerUser({ name, email, password }));
   };
 
   const toggleMember = () => {
-    setValues({ ...values, isMember: !values.isMember });
+    setValues ({ ...values, isMember: !values.isMember });
   };
 
   useEffect(() => {
     if (user) {
       setTimeout(() => {
-        navigate('/');
+        navigate("/");
       }, 2000);
     }
-  }, [user,navigate]);
+  }, [user, navigate]);
 
   return (
     <Wrapper className="full-page">
@@ -74,20 +74,25 @@ const RegisterPage = () => {
           value={values.email}
           handleChange={handleChange}
         />
+            
         <FormRow
           type="password"
           name="password"
           value={values.password}
           handleChange={handleChange}
         />
+            
         <button type="submit" className="btn btn-block" disabled={isLoading}>
-          {isLoading ? 'loading' : 'submit'}
+          {isLoading ? "loading" : "submit"}
         </button>
+          
         <p>
           {values.isMember ? "Not a member yet?" : "Already a member?"}
+
           <button type="button" onClick={toggleMember} className="member-btn">
             {values.isMember ? "Register" : "Login"}
           </button>
+            
         </p>
       </form>
     </Wrapper>
