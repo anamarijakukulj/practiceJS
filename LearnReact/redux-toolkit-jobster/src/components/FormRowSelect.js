@@ -11,7 +11,7 @@ const FormRowSelect = ({ labelText, name, value, handleChange, list }) => {
         onChange={handleChange}
         className="form-select"
       >
-        {list.map((index, itemValue) => {
+        {list.map((itemValue, index) => {
           return (
             <option key={index} value={itemValue}>
               {itemValue}
