@@ -7,5 +7,31 @@ import BigSidebar from "./BigSidebar";
 import SearchContainer from "./SearchContainer";
 import JobsContainer from "./JobsContainer";
 import Job from "./Job";
+import Loading from "./Loading";
+import StatsContainer from "./StatsContainer";
+import ChartsContainer from "./ChartsContainer";
+import StatItem from "./StatItem";
+import AreaChart from "./AreaaChart";
+import BarChart from "./BarChart";
+import SearchContainer from "./SearchContainer";
+import StatsContainer from "./StatsContainer";
 
-export { Logo, FormRow, FormRowSelect, Navbar, SmallSidebar, BigSidebar, SearchContainer, JobsContainer, Job };
+export {
+  Logo,
+  FormRow,
+  FormRowSelect,
+  Navbar,
+  SmallSidebar,
+  BigSidebar,
+  SearchContainer,
+  JobsContainer,
+  Job,
+  Loading,
+  StatsContainer,
+  ChartsContainer,
+  StatItem,
+  AreaChart,
+  BarChart,
+  SearchContainer,
+  StatsContainer
+};
