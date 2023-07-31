@@ -9,6 +9,7 @@ export const createJobThunk = async (job, thunkAPI) => {
     return resp.data;
   } catch (error) {
     return checkForUnauthorizedResponse(error, thunkAPI);
+  }
 };
 
 export const deleteJobThunk = async (jobId, thunkAPI) => {
