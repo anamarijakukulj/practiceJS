@@ -11,10 +11,8 @@ import Loading from "./Loading";
 import StatsContainer from "./StatsContainer";
 import ChartsContainer from "./ChartsContainer";
 import StatItem from "./StatItem";
-import AreaChart from "./AreaaChart";
+import AreaChart from "./AreaChart";
 import BarChart from "./BarChart";
-import SearchContainer from "./SearchContainer";
-import StatsContainer from "./StatsContainer";
 
 export {
   Logo,
@@ -32,6 +30,4 @@ export {
   StatItem,
   AreaChart,
   BarChart,
-  SearchContainer,
-  StatsContainer
 };
