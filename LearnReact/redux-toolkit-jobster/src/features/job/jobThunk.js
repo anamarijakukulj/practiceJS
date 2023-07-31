@@ -1,4 +1,4 @@
-import customFetch, { checkForUnauthorizedResponse }  from "../../utils/axios";
+import customFetch, { checkForUnauthorizedResponse } from "../../utils/axios";
 import { showLoading, hideLoading, getAllJobs } from "../allJobs/allJobsSlice";
 import { clearValues } from "./jobSlice";
 
